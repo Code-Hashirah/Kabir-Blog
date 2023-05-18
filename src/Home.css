@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#homePage{
+    background-image: url('/images/espresso.jpg');
+    /* opacity: 5; */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+
+}
+.text-area{
+    background-color: white;
+    /* background: transparent; */
+    color: black;
+    /* opacity: 80%; */
+    /* font-weight: bolder; */
+    margin: 50px;
+    padding: 30px;
+  
+}

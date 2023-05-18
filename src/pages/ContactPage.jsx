@@ -1,7 +1,9 @@
 import Contact from "../components/Contact"
 function ContactPage() {
   return (
-    <div>ContactPage</div>
+    <div>
+      <Contact/>
+    </div>
   )
 }
 

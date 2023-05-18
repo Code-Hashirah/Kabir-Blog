@@ -2,7 +2,12 @@
 
 function Admin() {
   return (
-    <div>Admin</div>
+    <div id="adminPage">
+    <h1 className="banner">Admin</h1>
+    <section className="text-area">
+
+    </section>
+    </div>
   )
 }
 

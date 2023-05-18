@@ -1,7 +1,9 @@
 import Blog from "../components/Blog"
 function BlogPage() {
   return (
-    <div>BlogPage</div>
+    <div>
+      <Blog/>
+    </div>
   )
 }
 

@@ -1,0 +1,8 @@
+#registerPage{
+    background-image: url('/images/direct-light.jpg');
+    /* opacity: 5; */
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+
+}

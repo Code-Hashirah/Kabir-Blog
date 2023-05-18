@@ -2,7 +2,12 @@
 
 function Blog() {
   return (
-    <div>Blog</div>
+    <div id="blogPage">
+    <h1 className="banner">Latest News</h1>
+    <section className="text-area">
+
+    </section>
+    </div>
   )
 }
 
