@@ -2,6 +2,10 @@ import './App.css'
 import './NavBar.css'
 import './Home.css'
 import './Blog.css'
+import './Login.css'
+import './Register.css'
+import './Admin.css'
+import './bootstrap.min.css'
 import {Route, Routes} from 'react-router-dom'
 import NavBar from './components/includes/NavBar'
 import AboutPage from './pages/AboutPage'
@@ -23,6 +27,7 @@ function App() {
       <Route path="/login" element={<LoginPage/>}/>
       <Route path="/register" element={<RegisterPage/>}/>
       <Route path="/contact" element={<ContactPage/>}/>
+      <Route path='/admin' element={<AdminPage/>}/>
     </Routes>
    </main>
   )

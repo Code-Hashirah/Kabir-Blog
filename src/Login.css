@@ -1,8 +1,10 @@
 #loginPage{
-    background-image: url('/images/direct-light.jpg');
-    /* opacity: 5; */
+    background-image: url('/images/sandwich.jpg');
     background-size: cover;
     background-attachment: fixed;
     padding: 30px;
+}
 
+form{
+    background: transparent;
 }

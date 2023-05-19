@@ -12,8 +12,10 @@ function NavBar() {
                     <li className="navList"> <Link className="navLinks" to="/blog">Blog</Link> </li>
                     <li className="navList"> <Link className="navLinks" to="/about">About</Link> </li>
                     <li className="navList"> <Link className="navLinks" to="/contact">Contact</Link> </li>
+                    {/* <li className="navList"> <Link className="navLinks" to={`/login/${item.id}`}>Login</Link></li> */}
                     <li className="navList"> <Link className="navLinks" to="/login">Login</Link></li>
                     <li className="navList"> <Link className="navLinks" to="/register">Register</Link></li>
+                    <li className="navList"> <Link className="navLinks" to="/admin"></Link></li>
                 </ul>
             </nav>
           
