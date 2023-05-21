@@ -20,7 +20,8 @@ function Admin() {
     }
     if(error.length==0){
       const blogDetails=JSON.stringify(blog)
-      localStorage.setItem(blog,blogDetails)
+      const blogKey=JSON.stringify(blog.Title)
+      localStorage.setItem(blogKey,blogDetails)
       console.log('Blog saved successfully!')
     }
   }

@@ -25,7 +25,8 @@ function Register() {
     }
     if(errors.length==0){
       const allData=JSON.stringify(user)
-      localStorage.setItem(Email,allData)
+      const userKey=JSON.stringify(user.Email)
+      localStorage.setItem(userKey,allData)
       console.log('Saved, No Errors')
     }
   }
