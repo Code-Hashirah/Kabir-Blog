@@ -7,8 +7,8 @@
     background-attachment: fixed;
     /* color: whitesmoke; */
 }
-#navbar{
-    background-color: white;
+.navbar{
+  
     position: sticky;
     top: 0;
     padding: 30px;
@@ -35,7 +35,22 @@
     text-decoration: none;
 }
 
-.nav-links:hover{
-    color: white;
-    background-color: black;
-}
+@media only screen and (max-width:768px){
+    .navbar{
+        margin: 0;
+        padding: 0;
+        background:transparent ;
+        position: fixed;
+        top: 0;
+        
+    }
+    #header{
+        height: 300px;
+    }
+    .collapseBox{
+        background-color:transparent ;
+    }
+    a{
+        color: brown;
+    }
+    }

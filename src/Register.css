@@ -3,6 +3,34 @@
     /* opacity: 5; */
     background-size: cover;
     background-attachment: fixed;
-    padding: 30px;
-
+    background-repeat: no-repeat;
 }
+#register{
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin: 5px;
+}
+#register input{
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+}
+#register label{
+    text-align: start;
+    display: block;
+}
+.banner{
+    color: white;
+}
+@media only screen and (max-width:768px){
+    #registerPage{
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+    }
+    #register{
+        width: 100%;
+    }
+    }

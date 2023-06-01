@@ -12,8 +12,17 @@
 }
 
 .text-area{
-    background-color: white;
+    /* background-color: white; */
     color: black;
     margin: 50px;
     padding: 30px;
+}
+
+@media only screen and (max-width:768px){
+.text-area{
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+
 }
