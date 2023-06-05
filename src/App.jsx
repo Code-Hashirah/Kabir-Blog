@@ -29,11 +29,11 @@ const [isSignedIn, setIsSignedIn] = useState(false)
     <Routes>
       <Route path="/" element={<Index/>} />
       <Route path="/blog" element={<BlogPage/>} />
-      <Route path="/about" element={<AboutPage/>} />
-      <Route path="/login" element={<LoginPage/>}/>
-      <Route path="/register" element={<RegisterPage/>}/>
+      <Route path="/about" element={<AboutPage/>} />     
       <Route path="/contact" element={<ContactPage/>}/>
       <Route path='/admin' element={<AdminPage/>}/>
+      <Route path='/login' element={<LoginPage/>}/>
+      <Route path='/register' element={<RegisterPage/>}/>
     </Routes>
    </main>
    </loggedIn.Provider>

@@ -24,7 +24,7 @@ function Login() {
       let validatedUser=users.filter((value, index)=>{
         return value.Email== user.email && value.Password ==user.password
       })
-      if(validatedUser.length==0){
+      if(validatedUser.length == 0){
         alert('invalid details')
       }
       else{
@@ -44,12 +44,12 @@ function Login() {
          
           <div className="py-3">
             <label htmlFor="Email" className="">Email</label>
-            <input type="text" onChange={getUser} name="Email" id="Email" className=" text-bg-light"/>
+            <input type="text" onChange={getUser} name="email" id="Email" className=" text-bg-light"/>
           </div>
 
           <div className="py-3">
             <label htmlFor="Password" className="">Password</label>
-            <input type="password" onChange={getUser} name="Password" id="Password" className=" text-bg-light"/>
+            <input type="password" onChange={getUser} name="password" id="Password" className=" text-bg-light"/>
           </div>
 
           <div className="py-3">
