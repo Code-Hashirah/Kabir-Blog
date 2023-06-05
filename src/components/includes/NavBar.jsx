@@ -1,6 +1,15 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+// import { animateScroll as scroll } from 'react-scroll';
+import {animateScroll as scroll } from 'react-scroll'
 
 function NavBar() {
+  const handleScrollToBottom = () => {
+    scroll.scrollTo(0, {
+      duration: 500,
+      smooth: 'easeInOutQuart',
+      containerId: 'Body',
+    });
+  };
   return (
     <div>
         <header id="header">
@@ -14,26 +23,27 @@ function NavBar() {
       <div className="collapse navbar-collapse text-bg-dark" id="collapsibleNavbar">
         <ul className="navbar-nav">
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/">Home</Link>
+            <Link className="nav-link text-white" to="/"  onClick={handleScrollToBottom}>Home</Link>
           </li>
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/blog">Blog</Link>
+            <Link className="nav-link text-white" to="/blog"  onClick={handleScrollToBottom}>Blog</Link>
           </li>
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/about">About</Link>
+            <Link className="nav-link text-white" to="/about" onClick={handleScrollToBottom}>About</Link>
           </li>
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/contact">Contact</Link>
+            <Link className="nav-link text-white" to="/contact" onClick={handleScrollToBottom}>Contact</Link>
           </li>
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/login">Login</Link>
+            <Link className="nav-link text-white" to="/login" onClick={handleScrollToBottom}>Login</Link>
           </li>
           <li className="nav-item px-5">
-            <Link className="nav-link text-white" to="/register">Register</Link>
+            <Link className="nav-link text-white" to="/register"onClick={handleScrollToBottom}>Register</Link>
           </li>
           <li className="nav-item px-5">
             <Link className="nav-link text-white" to="/admin"></Link>
           </li>
+          
         </ul>
       </div>
     </div>

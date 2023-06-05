@@ -18,9 +18,12 @@ import ContactPage from './pages/ContactPage'
 import Index from './pages/Index'
 import LoginPage from './pages/LoginPage'
 import RegisterPage from './pages/RegisterPage'
-
+import {useState, createContext} from 'react'
+export const loggedIn =createContext()
 function App() {
+const [isSignedIn, setIsSignedIn] = useState(false)
   return (
+    <loggedIn.Provider value={[isSignedIn, setIsSignedIn]}>
    <main>
     <NavBar/>
     <Routes>
@@ -33,6 +36,7 @@ function App() {
       <Route path='/admin' element={<AdminPage/>}/>
     </Routes>
    </main>
+   </loggedIn.Provider>
   )
 }
 

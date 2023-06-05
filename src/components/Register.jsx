@@ -1,10 +1,19 @@
+import { all } from 'axios';
 import {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+// import { Link } from 'react-scroll';
+// import { animateScroll as scroll } from 'react-scroll';
 function Register() {
+  // const handleScrollToBottom = () => {
+  //   scroll.scrollTo("Body");
+  // };
+  const navigate = useNavigate();
   const [user, setUser]=useState({
     Email:"",
     Phone:"",
     Password:""
   })
+ 
   const [errors, setErrors]=useState([])
   const registerUser=(e)=>{
     e.preventDefault()
@@ -24,21 +33,28 @@ function Register() {
       })
     }
     if(errors.length==0){
-      const allData=JSON.stringify(user)
-      const userKey=JSON.stringify(user.Email)
-      localStorage.setItem(userKey,allData)
+      let User=[];
+      // const allData=JSON.stringify(user)
+      // const userKey=JSON.stringify(user.Email)
+      if(localStorage.getItem('Users')){
+       let localData=localStorage.getItem('Users')
+        User= JSON.parse(localData)
+        localStorage.setItem('User',User)
+      }
+      User.push(user)
+      const userData=JSON.stringify(User)
+      localStorage.setItem('Users',userData)
       console.log('Saved, No Errors')
-      navigate("/")
+      // navigate("/login")
     }
   }
   return (
-    <div>
+    <div  id="Body">
     
    <div id="registerPage">
    <h1 className="banner">Register</h1>
    <section className="d-flex justify-content-center">
-    {/* <h4>{JSON.stringify(user)}</h4> */}
-    {/* <h5>{JSON.stringify(errors)}</h5> */}
+  
     <form action="" method="post" onSubmit={registerUser} className="attributecolor text-bg-light form-control-md" id="register">
          
           <div className="py-2">
@@ -66,7 +82,7 @@ function Register() {
 
           <div className="py-2">
             <label htmlFor="Password" className="">Confirm Password</label>
-            <input type="password" name="Password" id="Password" className="text-bg-light"/>
+            <input type="password" name="Password" id="CPassword" className="text-bg-light"/>
           </div>
 
           <div className="py-2my-2">

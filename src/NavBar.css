@@ -4,8 +4,10 @@
     /* opacity: 5; */
     height: 600px;
     background-size: cover;
+    object-fit: cover;
     background-attachment: fixed;
     /* color: whitesmoke; */
+    background-position: center
 }
 .navbar{
   

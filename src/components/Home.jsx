@@ -17,6 +17,7 @@ function Home() {
     homeBlog()
   }, [])
   return (
+    <div id='Body'>
     <div id="homePage">
       <h1 className="banner">Home</h1>
     <section className="text-area row">
@@ -38,6 +39,7 @@ function Home() {
 
      }
     </section>
+    </div>
     </div>
   )
 }

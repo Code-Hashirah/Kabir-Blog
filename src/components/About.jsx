@@ -2,6 +2,7 @@
 
 function About() {
   return (
+    <div  id="Body">
     <div id="aboutPage">
     <h1 className="banner">About Kabir</h1>
     <section className="text-area">
@@ -10,6 +11,7 @@ function About() {
           
         </pre>
     </section>
+    </div>
     </div>
   )
 }

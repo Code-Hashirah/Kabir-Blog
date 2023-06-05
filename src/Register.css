@@ -1,9 +1,11 @@
 #registerPage{
     background-image: url('/images/coffee.jpg');
+    object-fit: cover;
     /* opacity: 5; */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center;
 }
 #register{
     width: 50%;
@@ -16,6 +18,7 @@
     border: none;
     border-bottom: 1px solid black;
     outline: none;
+    width:80%;
 }
 #register label{
     text-align: start;
