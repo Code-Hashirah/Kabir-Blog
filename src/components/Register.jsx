@@ -40,12 +40,13 @@ function Register() {
        let localData=localStorage.getItem('Users')
         User= JSON.parse(localData)
         localStorage.setItem('User',User)
+        navigate('/login')
       }
       User.push(user)
       const userData=JSON.stringify(User)
       localStorage.setItem('Users',userData)
       console.log('Saved, No Errors')
-      // navigate("/login")
+      navigate('/login')
     }
   }
   return (

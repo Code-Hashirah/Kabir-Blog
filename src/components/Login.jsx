@@ -2,7 +2,9 @@ import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {useContext} from 'react'
 import {loggedIn} from '../App'
+// export  const signedIn =useContext('False')
 function Login() {
+  
   let [isSignedIn, setIsSignedIn]=useContext(loggedIn)
   let navigate =useNavigate()
   const [user, setUser] = useState({

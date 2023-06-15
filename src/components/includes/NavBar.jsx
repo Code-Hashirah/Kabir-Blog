@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from 'react-scroll';
 import { useState,useContext } from 'react';
-import { loggedIn } from '../../App';
+import {loggedIn } from '../../App';
+import {useEffect} from'react'
 
 function NavBar() {
-  const { isSignedIn } = useContext(loggedIn);
-
+  // const { isSignedIn } = useContext(loggedIn);
+  let SignedIn=(JSON.parse(localStorage.getItem('Users')))
+  // const {SignedIn ,setSignedIn} =useState([])
+  // useEffect(()=>{
+  
+      
+  // }, [])
   const handleScrollToBottom = () => {
     scroll.scrollTo(0, {
       duration: 500,
@@ -13,7 +19,9 @@ function NavBar() {
       containerId: 'Body',
     });
   };
-
+  // let userData = JSON.parse(localStorage.getItem('Users'))
+   
+// console.log(loggedIn)
   return (
     <div>
       <header id="header">
@@ -38,7 +46,7 @@ function NavBar() {
                 <li className="nav-item px-5">
                   <Link className="nav-link text-white" to="/contact" onClick={handleScrollToBottom}>Contact</Link>
                 </li>
-                {!isSignedIn ? (
+                {!SignedIn ? (
                   <>
                     <li className="nav-item px-5">
                       <Link className="nav-link text-white" to="/login" onClick={handleScrollToBottom}>
@@ -52,11 +60,13 @@ function NavBar() {
                     </li>
                   </>
                 ) : 
+                <>
                 <li className="nav-item px-5">
                 <Link className="nav-link text-white" to="/login" onClick={handleScrollToBottom}>
                   Logout
                 </Link>
               </li>
+              </>
                 }
                 <li className="nav-item px-5">
                   <Link className="nav-link text-white" to="/admin"></Link>
